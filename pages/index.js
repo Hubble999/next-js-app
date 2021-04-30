@@ -1,10 +1,9 @@
+import React from 'react';
 
-import styles from '../styles/Home.module.css'
+const HomePage = () => {
+  return <div>
+    <h1>HomePage</h1>
+  </div>
+};
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-    <h1> Hello Next</h1>
-    </div>
-  )
-}
+export default HomePage;
