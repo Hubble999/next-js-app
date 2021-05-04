@@ -1,9 +1,13 @@
 import React from 'react';
+import events from '../data.js';
+import EventList from '../components/EventList/EventList.jsx';
 
 const HomePage = () => {
-  return <div>
-    <h1>HomePage</h1>
-  </div>
+  return (
+    <div>
+      <EventList items={events} />
+    </div>
+  );
 };
 
 export default HomePage;
