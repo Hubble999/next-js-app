@@ -30,3 +30,5 @@ const DUMMY_EVENTS = [
     isFeatured: true,
   },
 ];
+
+export default DUMMY_EVENTS;
