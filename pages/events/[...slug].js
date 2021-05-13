@@ -1,12 +1,9 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import events from '../../data';
+import Head from 'next/head';
 import EventList from '../../components/EventList/EventList';
 import Button from '../../components/Button/Button';
 import { getFilteredEvents } from '../../utils.js';
 
 const FilteredEventsPage = ({ filteredEvents }) => {
-  console.log(filteredEvents)
   if (!filteredEvents) {
     return <h2>Loading...</h2>;
   }
@@ -18,6 +15,10 @@ const FilteredEventsPage = ({ filteredEvents }) => {
     </div>
   ) : (
     <div>
+      <Head>
+        <title>Filtered events</title>
+        <meta name='description' content='filtered events by year and month' />
+      </Head>
       <EventList items={filteredEvents} />
     </div>
   );
