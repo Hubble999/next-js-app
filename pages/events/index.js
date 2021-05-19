@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import EventList from '../../components/EventList/EventList';
 import EventSearch from '../../components/EventSearch/EventSearch';
-import { getEvents } from '../../utils.js';
+import { getEvents } from '../../utils/events.js';
 
 const Events = ({ events }) => {
   const router = useRouter();
@@ -22,9 +22,9 @@ export async function getStaticProps() {
   const events = await getEvents();
   return {
     props: {
-      events,
+      events
     },
-    revalidate: 100,
+    revalidate: 100
   };
 }
 

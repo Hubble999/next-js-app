@@ -1,8 +1,9 @@
+import Image from 'next/image';
 import AddressIcon from '../AddressIcon/AddressIcon';
 import DateIcon from '../DateIcon/DateIcon';
 import LogisticsItem from '../LogisticsItem/LogisticksItem';
 import classes from './EventLogistics.module.scss';
-import { makeReadableDate } from '../../utils.js';
+import { makeReadableDate } from '../../utils/events.js';
 
 const EventLogistics = (props) => {
   const { date, address, image, imageAlt } = props;
@@ -13,7 +14,7 @@ const EventLogistics = (props) => {
   return (
     <section className={classes.logistics}>
       <div className={classes.image}>
-        <img src={`/${image}`} alt={imageAlt} />
+        <Image src={`/${image}`} alt={imageAlt} width={160} height={160} />
       </div>
       <ul className={classes.list}>
         <LogisticsItem icon={DateIcon}>

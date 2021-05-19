@@ -28,10 +28,6 @@ function FilteredEventsPage({ filteredEvents }) {
   );
 }
 
-FilteredEventsPage.PropTypes = {
-  filteredEvents: PropTypes.array,
-};
-
 export async function getServerSideProps({ params }) {
   const [year, month] = params.slug;
   const filteredEvents = await getFilteredEvents(year, month);
