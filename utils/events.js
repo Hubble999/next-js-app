@@ -8,7 +8,7 @@ export const makeReadableDate = (date) =>
   });
 
 export const getEvents = async () => {
-  const URL = 'https://next-js-f6bc0-default-rtdb.europe-west1.firebasedatabase.app/events.json';
+  const URL = 'https://nextjs-35f8e-default-rtdb.europe-west1.firebasedatabase.app/events.json';
   const res = await fetch(URL);
   const data = await res.json();
   const events = Object.keys(data).map((key) => ({ id: key, ...data[key] }));

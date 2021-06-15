@@ -8,14 +8,13 @@ import { makeReadableDate } from '../../utils/events.js';
 
 function EventItem(props) {
   const { title, image, date, location, id } = props;
-
   const readableDate = makeReadableDate(date);
   const formattedAddress = location.replace(', ', '\n');
   const link = `/events/${id}`;
 
   return (
     <li className={classes.item}>
-      <Image src={'/' + image} alt={title} width={340} height={160} />
+      <img src={'/' + image} alt={title} width={340} height={160} />
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>
