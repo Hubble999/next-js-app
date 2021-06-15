@@ -1,4 +1,6 @@
-# [Посмотреть](https://next-js-app-seven.vercel.app/)
+# Built with Next.js React SCSS
+
+## [Посмотреть](https://next-js-app-seven.vercel.app/)
 
 ### Example: 
 ![Example](/uploads/next.gif)
